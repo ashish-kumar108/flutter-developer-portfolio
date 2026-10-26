@@ -72,7 +72,8 @@ h1 { max-width: 670px; margin-bottom: 22px; font-size: clamp(42px, 5vw, 62px); }
 .summary-bar strong { margin-bottom: 3px; font-size: 13px; }
 .summary-bar span { color: #aebcda; font-size: 11px; }
 
-.section { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 96px 0; }
+.section { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 68px 0 38px; }
+.section + .section { padding-top: 38px; }
 .section-heading { display: grid; grid-template-columns: 1fr .72fr; gap: 70px; align-items: end; margin-bottom: 38px; }
 .section-heading.compact { grid-template-columns: 1fr; }
 .section-heading h2 { max-width: 650px; margin: 0; font-size: clamp(34px,4.2vw,50px); }
@@ -85,7 +86,7 @@ h1 { max-width: 670px; margin-bottom: 22px; font-size: clamp(42px, 5vw, 62px); }
 .rentmeter-overview > p:last-of-type { color: #c4d0e7; }
 .tech-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
 .tech-row span { padding: 5px 9px; border: 1px solid #d4deeb; border-radius: 999px; background: #fff; color: #536078; font-size: 10px; font-weight: 750; }
-.rentmeter-overview .tech-row span, .dark-card .tech-row span { color: #d9e4f7; border-color: #425681; background: rgba(255,255,255,.06); }
+.rentmeter-overview .tech-row span { color: #d9e4f7; border-color: #425681; background: rgba(255,255,255,.06); }
 .role-list { padding: 17px 32px; background: #eaf1fb; }
 .role-list > div { position: relative; margin: 12px 0; padding: 21px 20px 21px 65px; border: 1px solid #d1dceb; border-radius: 15px; background: var(--paper); }
 .role-list > div > span { position: absolute; left: 20px; top: 23px; width: 29px; height: 29px; display: grid; place-items: center; border-radius: 9px; color: var(--blue); background: var(--blue-soft); font-size: 9px; font-weight: 850; }
@@ -96,11 +97,9 @@ h1 { max-width: 670px; margin-bottom: 22px; font-size: clamp(42px, 5vw, 62px); }
 .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .project-card.accent-card { background: linear-gradient(145deg, #eef4ff, #dce9ff); }
 .project-card.soft-card { background: linear-gradient(145deg, #f6fbff, #e4f5f8); }
-.project-card.dark-card { color: #fff; border-color: #253968; background: linear-gradient(145deg, #152956, #0e1938); }
+.project-card.wide-card { grid-column: 1 / -1; min-height: 236px; background: linear-gradient(135deg, #ffffff, #eef5ff); }
 .project-index { display: flex; justify-content: space-between; color: var(--blue); font-size: 11px; font-weight: 850; }
 .project-index span { color: #64758f; text-transform: uppercase; letter-spacing: .07em; }
-.dark-card .project-index { color: #72a5ff; }
-.dark-card .project-index span, .dark-card p { color: #aebcda; }
 .project-card h3 { margin: 40px 0 10px; font-size: 25px; }
 .project-card p { margin-top: 0; color: var(--muted); }
 .project-card .tech-row { margin-top: auto; }
@@ -166,11 +165,13 @@ footer a { color: var(--ink); font-weight: 800; text-decoration: none; }
   .summary-bar { width: calc(100% - 46px); grid-template-columns: 1fr; }
   .summary-bar div { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); text-align: left; padding: 16px 18px; }
   .summary-bar div:last-child { border-bottom: 0; }
-  .section { padding: 76px 0; }
+  .section { padding: 54px 0 30px; }
+  .section + .section { padding-top: 30px; }
   .section-heading { margin-bottom: 30px; }
   .rentmeter-overview { padding: 34px 25px; }
   .role-list { padding: 10px 15px; }
   .project-grid, .skill-grid { grid-template-columns: 1fr; }
+  .project-card.wide-card { grid-column: auto; }
   .project-card { min-height: 290px; padding: 25px; }
   .experience-list article { grid-template-columns: 1fr; gap: 10px; padding: 25px; }
   .contact { margin-bottom: 38px; padding: 38px 25px; }
